@@ -1,0 +1,12 @@
+C:\Users\Jeff\SkyDrive\Documents\CSC230\ChatterBot\PriorityQueue\PriorityQueue\bin\Debug\PriorityQueue.exe.config
+C:\Users\Jeff\SkyDrive\Documents\CSC230\ChatterBot\PriorityQueue\PriorityQueue\bin\Debug\PriorityQueue.exe
+C:\Users\Jeff\SkyDrive\Documents\CSC230\ChatterBot\PriorityQueue\PriorityQueue\bin\Debug\PriorityQueue.pdb
+C:\Users\Jeff\SkyDrive\Documents\CSC230\ChatterBot\PriorityQueue\PriorityQueue\obj\Debug\PriorityQueue.csprojResolveAssemblyReference.cache
+C:\Users\Jeff\SkyDrive\Documents\CSC230\ChatterBot\PriorityQueue\PriorityQueue\obj\Debug\PriorityQueue.exe
+C:\Users\Jeff\SkyDrive\Documents\CSC230\ChatterBot\PriorityQueue\PriorityQueue\obj\Debug\PriorityQueue.pdb
+C:\Users\Jeff\Documents\Visual Studio 2013\Projects\PriorityQueue\PriorityQueue\bin\Debug\PriorityQueue.exe.config
+C:\Users\Jeff\Documents\Visual Studio 2013\Projects\PriorityQueue\PriorityQueue\obj\Debug\PriorityQueue.exe
+C:\Users\Jeff\Documents\Visual Studio 2013\Projects\PriorityQueue\PriorityQueue\obj\Debug\PriorityQueue.pdb
+C:\Users\Jeff\Documents\Visual Studio 2013\Projects\PriorityQueue\PriorityQueue\bin\Debug\PriorityQueue.exe
+C:\Users\Jeff\Documents\Visual Studio 2013\Projects\PriorityQueue\PriorityQueue\bin\Debug\PriorityQueue.pdb
+C:\Users\Jeff\Documents\Visual Studio 2013\Projects\PriorityQueue\PriorityQueue\obj\Debug\PriorityQueue.csprojResolveAssemblyReference.cache
