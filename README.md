@@ -1,4 +1,4 @@
-# Priority_Queue_For_.NET
+# Priority Queue For .NET
 
 A simple and super efficient priority Queue for .NET that uses a min heap for the underlying data structure.
 
@@ -23,7 +23,7 @@ A simple and super efficient priority Queue for .NET that uses a min heap for th
 
 ### Complex Objects (Badgers)
 
-#### First, our Badger class
+##### First, our Badger class
 
     public class Badger
     {
@@ -48,7 +48,7 @@ A simple and super efficient priority Queue for .NET that uses a min heap for th
         }
     }
 
-#### Next, Badger prioritizing
+##### Next, Badger prioritizing
 
     var badgers = new []
     {
@@ -57,20 +57,20 @@ A simple and super efficient priority Queue for .NET that uses a min heap for th
         new Badger { Color = "Black", Weight = 16.3 },
     };
 
-    var baderQueue = new PriorityQueue<Badger>();
+    var badgerQueue = new PriorityQueue<Badger>();
 
     foreach (var badger in badgers)
     {
-        baderQueue.Offer(badger);
+        badgerQueue.Offer(badger);
     }
 
-    while (baderQueue.Count > 0)
+    while (badgerQueue.Count > 0)
     {
-        var nextBadger = baderQueue.Poll();
+        var nextBadger = badgerQueue.Poll();
         Console.WriteLine("The {0} badger weighs {1} lbs", nextBadger.Color, nextBadger.Weight);
     }
 
-If you run the program you will see that the badgers will be printed in the correct order, by weight!
+If you run the program you will see that the badgers are dequeued in the proper order, by ascending weight!
 
     The Black badger weighs 16.3 lbs
     The White badger weighs 20.5 lbs

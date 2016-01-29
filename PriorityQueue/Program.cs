@@ -39,16 +39,16 @@ namespace PriorityQueue
                 new Badger { Color = "Black", Weight = 16.3 },
             };
 
-            var baderQueue = new PriorityQueue<Badger>();
+            var badgerQueue = new PriorityQueue<Badger>();
 
             foreach (var badger in badgers)
             {
-                baderQueue.Offer(badger);
+                badgerQueue.Offer(badger);
             }
 
-            while (baderQueue.Count > 0)
+            while (badgerQueue.Count > 0)
             {
-                var nextBadger = baderQueue.Poll();
+                var nextBadger = badgerQueue.Poll();
                 Console.WriteLine("The {0} badger weighs {1} lbs", nextBadger.Color, nextBadger.Weight);
             }
         }
