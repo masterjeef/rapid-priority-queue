@@ -12,6 +12,9 @@ namespace PriorityQueue
     {
         static void Main(string[] args)
         {
+
+            // Sample with integers
+
             var rando = new Random();
             var max = 100;
             var queue = new PriorityQueue<int>();
@@ -25,6 +28,28 @@ namespace PriorityQueue
             {
                 var next = queue.Poll();
                 Console.WriteLine(next);
+            }
+
+            // Sample with Badgers
+
+            var badgers = new []
+            {
+                new Badger { Color = "White", Weight = 20.5 },
+                new Badger { Color = "Brown", Weight = 53.71 },
+                new Badger { Color = "Black", Weight = 16.3 },
+            };
+
+            var baderQueue = new PriorityQueue<Badger>();
+
+            foreach (var badger in badgers)
+            {
+                baderQueue.Offer(badger);
+            }
+
+            while (baderQueue.Count > 0)
+            {
+                var nextBadger = baderQueue.Poll();
+                Console.WriteLine("The {0} badger weighs {1} lbs", nextBadger.Color, nextBadger.Weight);
             }
         }
     }
