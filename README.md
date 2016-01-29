@@ -1,12 +1,18 @@
 # Priority Queue For .NET
 
-A simple and super efficient priority Queue for .NET that uses a min heap for the underlying data structure.
+A simple and super efficient priority Queue for .net that uses a min heap for the underlying data structure.
 
+**Method**      **Operation**    **Time Complexity**
+Peek()   =  Find Min     O(1)
+Offer()  =  Insert       O(log(n))
+Poll()   =  Dequeue      O(log(n))
+
+You can read more about heaps here : https://en.wikipedia.org/wiki/Heap_(data_structure)
 ## Usage
 
 ### Primitive Types
 
-    var queue = new PriorityQueue<int>();
+    ```var queue = new PriorityQueue<int>();
     
     var rando = new Random();
     var max = 10;
@@ -19,13 +25,13 @@ A simple and super efficient priority Queue for .NET that uses a min heap for th
     while (queue.Count > 0)
     {
         var next = queue.Poll();
-    }
+    }```
 
 ### Complex Objects (Badgers)
 
 ##### First, our Badger class
 
-    public class Badger
+    ```public class Badger
     {
         public string Color { get; set; }
 
@@ -46,11 +52,11 @@ A simple and super efficient priority Queue for .NET that uses a min heap for th
         {
             return !(b1 < b2);
         }
-    }
+    }```
 
 ##### Next, Badger prioritizing
 
-    var badgers = new []
+    ```var badgers = new []
     {
         new Badger { Color = "White", Weight = 20.5 },
         new Badger { Color = "Brown", Weight = 53.71 },
@@ -68,7 +74,7 @@ A simple and super efficient priority Queue for .NET that uses a min heap for th
     {
         var nextBadger = badgerQueue.Poll();
         Console.WriteLine("The {0} badger weighs {1} lbs", nextBadger.Color, nextBadger.Weight);
-    }
+    }```
 
 If you run the program you will see that the badgers are dequeued in the proper order, by ascending weight!
 
