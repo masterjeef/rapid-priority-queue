@@ -15,13 +15,16 @@ namespace PriorityQueue
             var rando = new Random();
             var max = 100;
             var queue = new PriorityQueue<int>();
-            for (int i = 0; i < 10; i++)
+
+            for (int i = 0; i < max; i++)
             {
                 queue.Offer(rando.Next(max));
             }
-            while (queue.Size > 0)
+
+            while (queue.Count > 0)
             {
-                Console.WriteLine(queue.Poll());
+                var next = queue.Poll();
+                Console.WriteLine(next);
             }
         }
     }

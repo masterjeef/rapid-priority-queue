@@ -9,7 +9,9 @@ namespace PriorityQueue.Interfaces
     public interface IQueue<T>
     {
         T Poll();
+
         bool Offer(T t);
+
         T Peek();
     }
 }
