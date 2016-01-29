@@ -2,8 +2,8 @@
 
 A simple and super efficient priority Queue for .net that uses a min heap for the underlying data structure.
 
-| Method Operation | Time Complexity |
-| ---------------- | --------------- |
+| Method | Operation | Time Complexity |
+| ------ | --------- | --------------- |
 | Peek() | Find Min | O(1) |
 | Offer() | Insert | O(log(n)) |
 | Poll() | Dequeue | O(log(n)) |
