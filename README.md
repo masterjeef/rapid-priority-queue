@@ -31,7 +31,7 @@ A simple and super efficient priority Queue for .NET that uses a min heap for th
 
         public double Weight { get; set; }
 
-        // IMPORTANT: the less than operator must be overriden to use this object
+        // IMPORTANT: the less than operator must be overloaded to use this object
         // in the priority queue
         
         public static bool operator <(Badger b1, Badger b2)
@@ -70,4 +70,8 @@ A simple and super efficient priority Queue for .NET that uses a min heap for th
         Console.WriteLine("The {0} badger weighs {1} lbs", nextBadger.Color, nextBadger.Weight);
     }
 
-If you run this code you will see the badgers will be printed in the correct order, by weight.
+If you run this code you will see the badgers will be printed in the correct order, by weight!
+
+    The Black badger weighs 16.3 lbs
+    The White badger weighs 20.5 lbs
+    The Brown badger weighs 53.71 lbs
