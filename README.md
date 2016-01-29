@@ -70,7 +70,7 @@ A simple and super efficient priority Queue for .NET that uses a min heap for th
         Console.WriteLine("The {0} badger weighs {1} lbs", nextBadger.Color, nextBadger.Weight);
     }
 
-If you run this code you will see the badgers will be printed in the correct order, by weight!
+If you run the program you will see that the badgers will be printed in the correct order, by weight!
 
     The Black badger weighs 16.3 lbs
     The White badger weighs 20.5 lbs
