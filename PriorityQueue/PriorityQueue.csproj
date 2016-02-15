@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Badger.cs" />
     <Compile Include="Collections\PriorityQueue.cs" />
     <Compile Include="Interfaces\IQueue.cs" />
     <Compile Include="Program.cs" />

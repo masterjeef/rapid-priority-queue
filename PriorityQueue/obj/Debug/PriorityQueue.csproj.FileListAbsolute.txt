@@ -1,6 +1,5 @@
 C:\Users\Jeff\Documents\Priority_Queue_For_.NET\PriorityQueue\bin\Debug\PriorityQueue.exe.config
 C:\Users\Jeff\Documents\Priority_Queue_For_.NET\PriorityQueue\bin\Debug\PriorityQueue.exe
 C:\Users\Jeff\Documents\Priority_Queue_For_.NET\PriorityQueue\bin\Debug\PriorityQueue.pdb
-C:\Users\Jeff\Documents\Priority_Queue_For_.NET\PriorityQueue\obj\Debug\PriorityQueue.csprojResolveAssemblyReference.cache
 C:\Users\Jeff\Documents\Priority_Queue_For_.NET\PriorityQueue\obj\Debug\PriorityQueue.exe
 C:\Users\Jeff\Documents\Priority_Queue_For_.NET\PriorityQueue\obj\Debug\PriorityQueue.pdb

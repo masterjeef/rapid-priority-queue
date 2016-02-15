@@ -25,27 +25,6 @@ namespace PriorityQueue
                 Console.WriteLine(next);
             }
 
-            // Sample with Badgers
-
-            var badgers = new []
-            {
-                new Badger { Color = "White", Weight = 20.5 },
-                new Badger { Color = "Brown", Weight = 53.71 },
-                new Badger { Color = "Black", Weight = 16.3 },
-            };
-
-            var badgerQueue = new PriorityQueue<Badger>();
-
-            foreach (var badger in badgers)
-            {
-                badgerQueue.Offer(badger);
-            }
-
-            while (badgerQueue.Count > 0)
-            {
-                var nextBadger = badgerQueue.Poll();
-                Console.WriteLine("The {0} badger weighs {1} lbs", nextBadger.Color, nextBadger.Weight);
-            }
         }
     }
 }

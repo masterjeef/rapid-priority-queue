@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Priority Queue For .net")]
-[assembly: AssemblyDescription("A simple and super efficient priority Queue for .net")]
+[assembly: AssemblyTitle("Testing")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PriorityQueue")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyProduct("Testing")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("161010e4-c141-47d5-9199-400d9bcb1292")]
+[assembly: Guid("aacf5628-1ed6-4378-bf7b-59fd15d0a93f")]
 
 // Version information for an assembly consists of the following four values:
 //
