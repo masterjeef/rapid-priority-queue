@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Priority Queue For .net")]
-[assembly: AssemblyDescription("A simple and super efficient priority Queue for .net")]
+[assembly: AssemblyTitle("Priority Queue For .Net")]
+[assembly: AssemblyDescription("A simple and super efficient priority queue")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PriorityQueue")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCompany("Jeff")]
+[assembly: AssemblyProduct("RapidPriorityQueue")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

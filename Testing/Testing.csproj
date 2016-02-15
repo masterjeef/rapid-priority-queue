@@ -66,9 +66,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PriorityQueue\PriorityQueue.csproj">
+    <ProjectReference Include="..\PriorityQueue\RapidPriorityQueue.csproj">
       <Project>{879c2041-f403-40c6-9c86-039d0852e9bb}</Project>
-      <Name>PriorityQueue</Name>
+      <Name>RapidPriorityQueue</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
