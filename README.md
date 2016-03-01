@@ -1,4 +1,4 @@
-# Priority Queue For .NET
+# Rapid Priority Queue
 
 A simple and super efficient priority Queue for .net that uses a min heap for the underlying data structure.
 
