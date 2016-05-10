@@ -1,3 +1,5 @@
+![alt text](https://raw.githubusercontent.com/masterjeef/rapid-priority-queue/master/min-heap.png "Rapid Priority Queue")
+
 # Rapid Priority Queue
 
 A simple and super efficient priority Queue for .net that uses a min heap for the underlying data structure.
