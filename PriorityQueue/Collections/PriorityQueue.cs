@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PriorityQueue.Interfaces;
+using PriorityQueue.Comparers;
 using System.Collections;
 
 namespace PriorityQueue.Collections
@@ -14,6 +14,12 @@ namespace PriorityQueue.Collections
         private T[] _heap = new T[3];
         private int _count = 0;
         private int _rows = 2;
+        private readonly IComparer<T> _comparer;
+
+        public PriorityQueue(IComparer<T> comparer)
+        {
+            _comparer = comparer;
+        }
 
         public int Count
         {
@@ -96,9 +102,9 @@ namespace PriorityQueue.Collections
             if (index >= 0)
             {
                 int parentIndex = Parent(index);
-                dynamic child = _heap[index];
-                dynamic parent = _heap[parentIndex];
-                if (parentIndex >= 0 && child < parent)
+                var child = _heap[index];
+                var parent = _heap[parentIndex];
+                if (parentIndex >= 0 && _comparer.Compare(child, parent) < 0)
                 {
                     _heap[parentIndex] = child;
                     _heap[index] = parent;
@@ -114,15 +120,15 @@ namespace PriorityQueue.Collections
                 var childIndex = LeftChild(index);
                 if (childIndex < Count)
                 {
-                    dynamic child = _heap[childIndex];
-                    dynamic rightChild = _heap[childIndex + 1];
-                    if (child > rightChild)
+                    var child = _heap[childIndex];
+                    var rightChild = _heap[childIndex + 1];
+                    if (_comparer.Compare(child, rightChild) > 0)
                     {
                         childIndex++;
                     }
                     child = _heap[childIndex];
-                    dynamic parent = _heap[index];
-                    if (parent > child)
+                    var parent = _heap[index];
+                    if (_comparer.Compare(parent, child) > 0)
                     {
                         _heap[index] = child;
                         _heap[childIndex] = parent;

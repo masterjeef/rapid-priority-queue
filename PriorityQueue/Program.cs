@@ -1,5 +1,7 @@
 ﻿using PriorityQueue.Collections;
+using PriorityQueue.Comparers;
 using System;
+using System.Collections.Generic;
 
 namespace PriorityQueue
 {
@@ -9,10 +11,11 @@ namespace PriorityQueue
         {
 
             // Sample with integers
-
             var rando = new Random();
             var max = 100;
-            var queue = new PriorityQueue<int>();
+
+            IComparer<int> comparer = new IntComparer();
+            var queue = new PriorityQueue<int>(comparer);
 
             for (int i = 0; i < max; i++)
             {

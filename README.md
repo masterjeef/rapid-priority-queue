@@ -22,7 +22,8 @@ To install Rapid Priority Queue, run the following command in the Package Manage
 
 ### Primitive Types
 
-    var queue = new PriorityQueue<int>();
+    IComparer<int> comparer = new IntComparer();
+    var queue = new PriorityQueue<int>(comparer);
     
     var rando = new Random();
     var max = 10;
@@ -37,6 +38,8 @@ To install Rapid Priority Queue, run the following command in the Package Manage
         var next = queue.Poll();
     }
 
+Unfortunately `int` is the only primitive type that I have implemented so far, but it's easy to create your own, see below.
+
 ### Complex Objects (Badgers)
 
 ##### First, our Badger class
@@ -47,20 +50,15 @@ To install Rapid Priority Queue, run the following command in the Package Manage
 
         public double Weight { get; set; }
 
-        // IMPORTANT: the less than operator must be overloaded to use this object
-        // in the priority queue
-        
-        public static bool operator <(Badger b1, Badger b2)
+    }
+
+##### The Comparer<T>
+
+    public class BadgerComparer : IComparer<Badger>
+    {
+        public int Compare(Badger x, Badger y)
         {
-            return b1.Weight < b2.Weight;
-        }
-        
-        // The greater than operator will not be used in the priority queue, but
-        // you must implement both. I recommend the following.
-        
-        public static bool operator >(Badger b1, Badger b2)
-        {
-            return !(b1 < b2);
+            return x.Weight.CompareTo(y.Weight);
         }
     }
 
@@ -73,7 +71,9 @@ To install Rapid Priority Queue, run the following command in the Package Manage
         new Badger { Color = "Black", Weight = 16.3 },
     };
 
-    var badgerQueue = new PriorityQueue<Badger>();
+    var badgerComparer = new BadgerComparer();
+
+    var badgerQueue = new PriorityQueue<Badger>(badgerComparer);
 
     foreach (var badger in badgers)
     {

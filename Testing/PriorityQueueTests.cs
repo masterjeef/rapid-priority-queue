@@ -1,10 +1,12 @@
 ﻿using PriorityQueue;
 using PriorityQueue.Collections;
+using PriorityQueue.Comparers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Testing.Comparers;
 using Xunit;
 
 namespace Testing
@@ -16,8 +18,8 @@ namespace Testing
         public void Priority_queue_must_queue_primitive_types()
         {
             var rando = new Random();
-            var max = 100;
-            var queue = new PriorityQueue<int>();
+            var max = 1000;
+            var queue = new PriorityQueue<int>(new IntComparer());
 
             for (int i = 0; i < max; i++)
             {
@@ -47,7 +49,9 @@ namespace Testing
                 new Badger { Color = "Black", Weight = 16.3 },
             };
 
-            var badgerQueue = new PriorityQueue<Badger>();
+            var badgerComparer = new BadgerComparer();
+
+            var badgerQueue = new PriorityQueue<Badger>(badgerComparer);
 
             foreach (var badger in badgers)
             {

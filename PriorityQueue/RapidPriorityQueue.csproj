@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collections\PriorityQueue.cs" />
+    <Compile Include="Comparers\IntComparer.cs" />
     <Compile Include="Interfaces\IQueue.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
