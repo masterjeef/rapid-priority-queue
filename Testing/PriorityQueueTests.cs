@@ -2,10 +2,6 @@
 using PriorityQueue.Collections;
 using PriorityQueue.Comparers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Testing.Comparers;
 using Xunit;
 
