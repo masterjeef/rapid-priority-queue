@@ -22,21 +22,23 @@ To install Priority Queue For .Net, run the following command in the Package Man
 
 ### Primitive Types
 
-    IComparer<int> comparer = new IntComparer();
-    var queue = new PriorityQueue<int>(comparer);
-    
-    var rando = new Random();
-    var max = 10;
-    
-    for (int i = 0; i < max; i++)
-    {
-        queue.Offer(rando.Next(max));
-    }
+```csharp
+IComparer<int> comparer = new IntComparer();
+var queue = new PriorityQueue<int>(comparer);
 
-    while (queue.Count > 0)
-    {
-        var next = queue.Poll();
-    }
+var rando = new Random();
+var max = 10;
+
+for (int i = 0; i < max; i++)
+{
+    queue.Offer(rando.Next(max));
+}
+
+while (queue.Count > 0)
+{
+    var next = queue.Poll();
+}
+```
 
 Unfortunately `int` is the only primitive type that I have implemented so far, but it's easy to create your own, see below.
 
@@ -44,47 +46,53 @@ Unfortunately `int` is the only primitive type that I have implemented so far, b
 
 ##### First, our Badger class
 
-    public class Badger
-    {
-        public string Color { get; set; }
+```csharp
+public class Badger
+{
+    public string Color { get; set; }
 
-        public double Weight { get; set; }
+    public double Weight { get; set; }
 
-    }
+}
+```
 
 ##### The Comparer<T>
 
-    public class BadgerComparer : IComparer<Badger>
+```csharp
+public class BadgerComparer : IComparer<Badger>
+{
+    public int Compare(Badger x, Badger y)
     {
-        public int Compare(Badger x, Badger y)
-        {
-            return x.Weight.CompareTo(y.Weight);
-        }
+        return x.Weight.CompareTo(y.Weight);
     }
+}
+```
 
 ##### Next, Badger prioritizing
 
-    var badgers = new []
-    {
-        new Badger { Color = "White", Weight = 20.5 },
-        new Badger { Color = "Brown", Weight = 53.71 },
-        new Badger { Color = "Black", Weight = 16.3 },
-    };
+```csharp
+var badgers = new []
+{
+    new Badger { Color = "White", Weight = 20.5 },
+    new Badger { Color = "Brown", Weight = 53.71 },
+    new Badger { Color = "Black", Weight = 16.3 },
+};
 
-    var badgerComparer = new BadgerComparer();
+var badgerComparer = new BadgerComparer();
 
-    var badgerQueue = new PriorityQueue<Badger>(badgerComparer);
+var badgerQueue = new PriorityQueue<Badger>(badgerComparer);
 
-    foreach (var badger in badgers)
-    {
-        badgerQueue.Offer(badger);
-    }
+foreach (var badger in badgers)
+{
+    badgerQueue.Offer(badger);
+}
 
-    while (badgerQueue.Count > 0)
-    {
-        var nextBadger = badgerQueue.Poll();
-        Console.WriteLine("The {0} badger weighs {1} lbs", nextBadger.Color, nextBadger.Weight);
-    }
+while (badgerQueue.Count > 0)
+{
+    var nextBadger = badgerQueue.Poll();
+    Console.WriteLine("The {0} badger weighs {1} lbs", nextBadger.Color, nextBadger.Weight);
+}
+```
 
 If you run the program you will see that the badgers are dequeued in the proper order, by ascending weight!
 
